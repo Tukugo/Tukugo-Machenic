@@ -249,7 +249,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
           onPressed: () {
             if (_selectedSavedMethod.isNotEmpty) {
               print('Proceed with saved method: $_selectedSavedMethod');
-              context.go('/auth/drawer/addmoney');
+              context.pop();
             } else {
               print('Please select or enter a payment method');
               ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
